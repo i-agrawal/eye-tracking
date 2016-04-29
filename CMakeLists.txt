@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.0)
+cmake_minimum_required(VERSION 2.8)
 project(eye-detect)
 find_package(OpenCV REQUIRED)
 add_executable(eye-detect main.cpp neural-network/NeuralNetwork.cpp neural-network/NeuralNetwork.h)
