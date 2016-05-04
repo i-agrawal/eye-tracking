@@ -16,7 +16,7 @@ void on_mouse(int a, int x, int y, int b, void * ptr){
 int main(){
   Reader iReader("/Users/Ishan/eye-tracking/res/haarcascade_frontalface_alt.xml");
   //Point to store cursor position
-  Point pt, lpupil, rpupil;
+  Point pt;
   //the fps
   const int fps = 100;
   //the ms per frame
@@ -36,8 +36,7 @@ int main(){
 
       frame = cvarrToMat(cvQueryFrame(capture));
       flip(frame, frame, 1);
-      ROI = frame;
-      iReader.Detect(frame, ROI, lpupil, rpupil);
+      iReader.Display(frame);
 
       //break out when user presses a key
       int k = waitKey(ms);
