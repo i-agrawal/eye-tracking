@@ -13,8 +13,11 @@ void on_mouse(int a, int x, int y, int b, void * ptr){
     p->y = y;
 }
 
-int main(){
-  Reader iReader("/Users/Ishan/eye-tracking/res/haarcascade_frontalface_alt.xml");
+int main(int argc, char ** argv){
+  string path = argv[1];
+  path += "/haarcascade_frontalface_alt.xml";
+  cout << path << endl;
+  Reader iReader(path);
   //Point to store cursor position
   Point pt;
   //the fps
