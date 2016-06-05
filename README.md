@@ -1,5 +1,5 @@
 # eye-tracking
-Uses neural network to train a computer to track where your eye looks on screen.
+Uses image recognition software to track where your eye looks on screen.
 
 To run:
 
